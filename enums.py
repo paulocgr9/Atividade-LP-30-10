@@ -13,3 +13,10 @@ class MarcasAbsorvente(Enum):
     SUCO_DE_MORANGO = 3
     MAR_VERMELHO = 4
     DUREPOX = 5
+    
+class MarcaEscovasDeDente(Enum):
+    CURAPROX = 1
+    BAMBU = 2
+    COLGATE = 3
+    SENSODYNE = 4
+    ORALB = 5
