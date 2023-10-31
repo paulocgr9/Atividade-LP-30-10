@@ -16,4 +16,7 @@ class Sabão(Produto):
 
 class EscovaDeDente(Produto):
     def __init__(self, nome, marca, preco):
-        
+        super().__init__(self, nome, marca, preco)
+    
+    def obter_codigo_de_barras(self):
+        return "789" + "677564728" + self.marca.value
