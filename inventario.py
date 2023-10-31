@@ -24,4 +24,13 @@ class Inventario:
         else:
             self.estoque[codigo_de_barras] -= quantidade
             print(f"O {produto} foi vendido!")
-        
+
+    def retornar_produto(self, produto, quantidade):
+         codigo_de_barras = produto.obter_codigo_de_barras()
+
+         if codigo_de_barras not in self.estoque:
+              raise exc.ProdutoNaoDisponivel
+         
+         else:
+              self.estoque[codigo_de_barras] += quantidade
+              print(f"O produto {self.produto} foi retornado com sucesso.")
