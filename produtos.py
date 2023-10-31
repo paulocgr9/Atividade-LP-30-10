@@ -14,7 +14,7 @@ class Sabão(Produto):
     def obter_codigo_de_barras(self):
         return "789" + "600370516" + self.marca.value
 
-class Absorivente(Produto):
+class Absorvente(Produto):
     def __init__(self, nome, marca, preco):
         super().__init__(nome, marca, preco)
 
