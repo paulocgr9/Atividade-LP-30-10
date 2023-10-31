@@ -13,13 +13,13 @@ inventario_lojas = inventario.Inventario("Lojas Guilherme")
 # Sabão de uma marca diferente
 sabao_craca = produtos.Sabão("Sabão Cracrá", enums.MarcasSabao.CRACRA, 9999)
 
-# Adiciona no inventário da loja 5 sabãos cracrá
+# Adiciona no inventário da loja 5 sabões cracrá
 inventario_lojas.adicionar_produto(sabao_craca, 5)
 
-# Vende 3 sabãos cracrá
+# Vende 3 sabões cracrá
 inventario_lojas.vender_produto(sabao_craca, 3)
 
-# Se alguem tentar comprar mais sabãos do que tem no estoque, explode
+# Se alguem tentar comprar mais sabões do que tem no estoque, explode
 try:
     inventario_lojas.vender_produto(sabao_craca, 40)
 except excecoes.QuantidadeNaoDisponivel as e:

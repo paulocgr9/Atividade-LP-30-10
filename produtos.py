@@ -6,6 +6,9 @@ class Produto:
         self.nome = nome
         self.marca = marca
         self.preço = preço
+    
+    def __str__(self):
+        return self.nome 
 
     def obter_codigo_de_barras(self):
         pass
