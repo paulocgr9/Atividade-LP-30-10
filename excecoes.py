@@ -1,5 +1,5 @@
 class QuantidadeNaoDisponivek(Exception):
     pass
 
-class ProdutoInexistente(Exception):
+class ProdutoNaoDisponivel(Exception):
     pass
