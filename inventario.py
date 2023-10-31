@@ -11,7 +11,7 @@ class Inventario:
             self.estoque[codigo_de_barras] = quantidade
         else:
             self.estoque[codigo_de_barras] += quantidade
-        print(f"Adicionado {quantidade} {produto.nome} no estoque.")
+            print(f"Adicionado {quantidade} {produto.nome} no estoque.")
 
     def vender_produto(self, produto, quantidade):
         codigo_de_barras = produto.obter_codigo_de_barras()
@@ -27,11 +27,13 @@ class Inventario:
             print(f"O {produto} foi vendido!")
 
     def retornar_produto(self, produto, quantidade):
-         codigo_de_barras = produto.obter_codigo_de_barras()
+        codigo_de_barras = produto.obter_codigo_de_barras()
 
-         if codigo_de_barras not in self.estoque:
-              raise exc.ProdutoNaoDisponivel
-         
-         else:
-              self.estoque[codigo_de_barras] += quantidade
-              print(f"O produto {self.produto} foi retornado com sucesso.")
+        if codigo_de_barras not in self.estoque:
+            raise exc.ProdutoNaoDisponivel(f"O produto {self.produto} não pode ser devolvido.")
+        elif quantidade <= 0:
+            raise exc.QuantidadeInvalida(f"A quantidade informada não pode ser devolvida. A quantidade deve ser um número inteiro maior que 1.")
+        
+        else:
+            self.estoque[codigo_de_barras] += quantidade
+            print(f"O produto {self.produto} foi retornado com sucesso.")
