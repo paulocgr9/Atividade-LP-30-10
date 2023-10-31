@@ -1,3 +1,6 @@
+# A classe produto é geral. Como os códigos de barras dependem da categoria de produto,
+# Ela não implementa a geração de código de barras, apenas mostra que existe
+
 class Produto:
     def __init__(self, nome, marca, preço):
         self.nome = nome
@@ -12,9 +15,11 @@ class Sabão(Produto):
         super().__init__(nome, marca, preço)
 
     def obter_codigo_de_barras(self):
+        # O código de barras depende da classe de produto e da marca dele
         return "789" + "600370516" + str(self.marca.value)
 
     def tomar_banho(self):
+        # Cada tipo de produto tem funções específicas de coisas que só o produto faz
         print("Você tomou banho")
 
 class Absorvente(Produto):

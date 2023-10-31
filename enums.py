@@ -1,5 +1,7 @@
 from enum import Enum
 
+# Cada enumeração representa possíveis marcas para 3 possíveis produtos
+
 class MarcasSabao(Enum):
     CRACRA = 1
     CRECRE = 2
