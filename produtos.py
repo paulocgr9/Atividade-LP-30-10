@@ -1,15 +1,18 @@
 class Produto:
-    def __init__(self, nome, marca, preço):
+    def __init__(self, nome, marca, preco):
         self.nome = nome
         self.marca = marca
-        self.preço = preço
+        self.preco = preco
 
     def obter_codigo_de_barras(self):
         pass
 
-class Sabão(Produto):
-    def __init__(self, nome, marca, preço):
-        super().__init__(nome, marca, preço)
+class Sabao(Produto):
+    def __init__(self, nome, marca, preco):
+        super().__init__(nome, marca, preco)
 
     def obter_codigo_de_barras(self):
         return "789" + "600370516" + self.marca.value
+
+
+
